@@ -17,6 +17,8 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/SVGKit/SVGKit.git', :tag => s.version.to_s }
 
   s.source_files = 'Source/*.{h,m}', 'Source/**/*.{h,m}'
+  s.resource_bundles = {'SVGKit.Privacy' => 'SVGKit/PrivacyInfo.xcprivacy'}
+
   s.exclude_files = 'Source/include/*.h'
   s.libraries = 'xml2'
   s.framework = 'QuartzCore', 'CoreText'
